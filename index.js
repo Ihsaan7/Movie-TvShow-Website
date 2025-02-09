@@ -1,7 +1,27 @@
 document.addEventListener('DOMContentLoaded',()=>
   {
 
-  
+  // Handle back button press
+window.addEventListener('popstate', function(event) {
+    // Reload the current page
+    window.location.reload();
+});
+
+// Handle manual back button click (right-click -> back)
+window.onbeforeunload = function() {
+    // This will be triggered when navigating away from the page
+    if (performance.navigation.type === 2) { // 2 indicates back/forward navigation
+        window.location.reload();
+    }
+};
+
+// For modern browsers, also listen to the pageshow event
+window.addEventListener('pageshow', function(event) {
+    // Check if the page is being shown from the back-forward cache (bfcache)
+    if (event.persisted) {
+        window.location.reload();
+    }
+});
 
 // ------------------- navBar Toggle  starts -------------------
 const navIcon = document.querySelector('#navIcon');
