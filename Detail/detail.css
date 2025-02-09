@@ -105,7 +105,7 @@
   
   .content-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Reviews take 2/3, Screenshots take 1/3 */
+    grid-template-columns: 2fr 1fr; 
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -261,6 +261,25 @@
   .btn-submit:hover {
     transform: translateY(-2px);
   }
+
+  /* Add these styles to your detail.css */
+
+/* Base styles for watchlist button */
+.btn-watchlist {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background-color: #2196F3; /* Default blue color */
+  color: white;
+}
+
+
   
   /* Modal */
   .gallery-modal {
