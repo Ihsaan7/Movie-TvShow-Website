@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded',()=>
   {
 
 // Add this to your DOMContentLoaded event listener
-if (document.referrer.includes('detail.html')) {
+if (document.referrer.includes('./Detail/detail.html')) {
     window.location.reload();
+    
 }
 
 // ------------------- navBar Toggle  starts -------------------
