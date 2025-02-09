@@ -348,7 +348,10 @@ const allowedTvShows = [
 
 
 
-
+if (document.referrer.includes('./Detail/detail.html')) {
+    window.location.reload();
+    
+}
 
 
 
